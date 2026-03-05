@@ -1,46 +1,50 @@
-import { Button } from "flowbite-react/components/Button";
-import { Navbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle } from "flowbite-react/components/Navbar";
+
+
+"use client";
+
+import {
+  Navbar,
+  NavbarCollapse,
+  NavbarLink,
+  NavbarToggle,
+} from "flowbite-react";
 
 export function NavLinks() {
   return (
-    
-    <div 
-      className=" h-[182px] bg-[#CD9238]/42 flex items-center justify-center" 
-      style={{ backgroundColor: "" }}
-    >
-      <Navbar fluid rounded className="w-full bg-transparent">
-        <NavbarBrand href="https://flowbite-react.com">
-          <img
-            src="/favicon.svg"
-            className="mr-3 h-6 sm:h-9"
-            alt="Flowbite React Logo"
-          />
-          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-            Flowbite React
-          </span>
-        </NavbarBrand>
-        <div className="flex md:order-2">
-          {/* <Button>Get started</Button> */}
+    <div className="bg-[#CD9238]/42 w-full">
+      <Navbar fluid rounded={false} className="bg-transparent px-6 py-4">
+        
+       
+        <div className="flex md:order-2 items-center gap-4">
           <input
-              id="name"
-              type="text"
-              placeholder="Enter your First and Last name..."
-             
-              required
-            />
+            type="text"
+            className="h-[40px] md:h-[50px] w-[140px] md:w-[380px] rounded-[45px] bg-[#32C2CA] placeholder:text-black text-white px-4 focus:ring-0 focus:outline-none"
+            placeholder="Search..."
+          />
           <NavbarToggle />
         </div>
-        <NavbarCollapse>
-          <NavbarLink href="#" active>
-            Home
-          </NavbarLink>
 
-          <NavbarLink href="#">Create Account</NavbarLink>
-          <NavbarLink href="#">LogIn</NavbarLink>
-          <NavbarLink href="#">Categories</NavbarLink>
-          <NavbarLink href="#">Chats</NavbarLink>
-          <NavbarLink href="#">Credits</NavbarLink>
-          <NavbarLink href="#">Maps</NavbarLink>
+        <NavbarCollapse>
+          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-4 py-4 md:py-0">
+            {[
+              { icon: "/assets/HomeHelp.png", label: "Home" },
+              { icon: "/assets/AC.png", label: "Account" },
+              { icon: "/assets/logIn.png", label: "Login" },
+              { icon: "/assets/handshake.png", label: "Categories" },
+              { icon: "/assets/Chat Icon.png", label: "Chats" },
+              { icon: "/assets/credit-icon-7.png", label: "Credits" },
+              { icon: "/assets/Location.png", label: "Maps" },
+            ].map((item, index) => (
+              <NavbarLink 
+                key={index} 
+                href="#" 
+                className="flex flex-col items-center justify-center hover:bg-transparent"
+              >
+                <img src={item.icon} className="h-8 w-8 md:h-12 md:w-12" alt={item.label} />
+                <span className="text-xs md:text-sm mt-1">{item.label}</span>
+              </NavbarLink>
+            ))}
+          </div>
         </NavbarCollapse>
       </Navbar>
     </div>

@@ -91,6 +91,12 @@ const RegisterPage = () => {
           Create Account
         </Button>
       </form>
+
+      <div>
+        <p className="text-[40px] mt-10">
+          "The bank where everyone is equally wealthy."
+        </p>
+      </div>
     </div>
   );
 };

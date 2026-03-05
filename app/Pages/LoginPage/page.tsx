@@ -6,7 +6,7 @@ import { Checkbox } from "flowbite-react/components/Checkbox";
 import Link from "next/dist/client/link";
 import { Button } from "flowbite-react/components/Button";
 
-const RegisterPage = () => {
+const Page = () => {
   const customInputContainer =
     "w-full max-w-[505px] h-[63px] border-2 border-black rounded-[15px] bg-[#CD9238]/40 flex items-center px-5";
 
@@ -73,8 +73,13 @@ const RegisterPage = () => {
         </Button>
       </form>
       
+      <div>
+        <p className="text-[40px] mt-100">
+        "Invest an hour. Change a life."
+        </p>
+      </div>
     </div>
   );
 };
 
-export default RegisterPage;
+export default Page;

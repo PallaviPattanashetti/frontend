@@ -26,6 +26,7 @@ const page = () => {
       <button className="w-full max-w-198.75 h-29.25 rounded-[45px] bg-[#32C2CA] border-4 border-black flex items-center justify-center text-[40px] font-bold text-black hover:opacity-90 transition-opacity mt-20">
         Get Started
       </button>
+      
     </div>
   );
 };
