@@ -15,15 +15,15 @@ const RegisterPage = () => {
   return (
     <div
       className="min-h-screen bg-cover bg-center flex flex-col items-center p-4"
-      style={{ backgroundImage: "url('/assets/Background.png')" }}
+      style={{ backgroundImage: "url('/assets/TBBackround.jpeg')" }}
     >
-      <div className="w-full max-w-[896px] min-h-[99px] border-4 border-black bg-[#32C2CA] rounded-2xl flex items-center justify-center my-8 md:my-12">
+      <div className="w-full max-w-[696px] min-h-[99px] b  bg-[#5F4F4F]/50 rounded-2xl flex items-center justify-center my-8 md:my-12">
         <h1 className="text-[40px] md:text-[64px] font-extrabold text-black tracking-tight text-center">
           Welcome To TimeBank
         </h1>
       </div>
 
-      <form className="flex w-full max-w-lg flex-col items-center gap-6 mt-10 ">
+      <form className="flex w-full max-w-lg flex-col items-center gap-6 mt-10  ">
         <div className="w-full flex flex-col items-center">
           <div className={customInputContainer}>
             <input
@@ -86,7 +86,7 @@ const RegisterPage = () => {
 
         <Button
           type="submit"
-          className="!w-full !max-w-[696px] !h-[109px] !bg-[#32C2CA] hover:!bg-[#28a8af] border-2 border-black !rounded-[45px] !text-black !text-5xl font-bold"
+          className="!w-full !max-w-[396px] !h-[109px]  bg-[#5F4F4F]/50 hover:!bg-[#28a8af] border-2 border-black !rounded-[30px] !text-black !text-3xl font-bold"
         >
           Create Account
         </Button>

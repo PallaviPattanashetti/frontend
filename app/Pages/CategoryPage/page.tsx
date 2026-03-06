@@ -1,3 +1,5 @@
+
+
 "use client";
 import { Card } from "flowbite-react";
 
@@ -16,36 +18,65 @@ export default function HelpSection() {
   return (
     <div
       className="min-h-screen bg-cover bg-center flex flex-col items-center p-4"
-      style={{ backgroundImage: "url('/assets/Background.png')" }}
+      // style={{ backgroundImage: "url('/assets/Background.png')" }}
+      style={{ backgroundImage: "url('/assets/TBBackround.jpeg')" }}
     >
-      <div className="w-full max-w-[896px] min-h-[99px] border-4 border-black bg-[#32C2CA] rounded-2xl flex items-center justify-center my-8 p-4">
-        <h1 className="text-3xl md:text-[64px] font-extrabold text-black tracking-tight text-center">
+      <div className="w-full max-w-[850px] min-h-[70px]   bg-[#5F4F4F]/50 rounded-2xl flex items-center justify-center my-8 p-4">
+        <h1 className="text-2xl md:text-[64px] font-extrabold text-black tracking-tight text-center">
           Welcome to Help Category
         </h1>
       </div>
 
-      <div
-        className="w-full max-w-[1160px] min-h-auto md:h-[416px] border-4 border-black flex flex-col md:flex-row  items-center justify-center md:justify-between p-6 md:px-10 rounded-xl gap-6 mb-12"
-        style={{ backgroundColor: "rgba(205, 146, 56, 0.08)" }}
-      >
-        {[1, 2].map((i) => (
-          <Card
-            key={i}
-            className="w-full max-w-[224px] h-[202px] hover:shadow-lg transition-shadow"
-            imgSrc={topSectionImages[i - 1]}
-            imgAlt={`Feature ${i}`}
-          >
-            <button
-              className="w-[221px] h-[51px] border-[3px] border-black flex items-center justify-center font-bold text-black"
-              style={{ backgroundColor: "rgba(111, 120, 135, 0.8)" }}
-            >
-              Get Help
-            </button>
-          </Card>
-        ))}
-      </div>
+<div
+  className="w-full max-w-[1160px] min-h-auto md:min-h-[416px] border-4 border-black flex flex-col md:flex-row items-center justify-center md:justify-between p-6 md:px-10 rounded-xl gap-8 mb-12"
+  style={{ backgroundColor: "rgba(205, 146, 56, 0.08)" }}
+>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-12 w-full max-w-[1000px]  justify-items-center mb-12">
+  <Card
+    className="w-full max-w-[224px] min-h-[202px] hover:shadow-lg transition-shadow"
+    imgSrc={topSectionImages[0]}
+    imgAlt="Feature 1"
+  >
+    <div className="flex justify-center w-full">
+      <button
+        className="w-full max-w-[221px] h-[51px] border-[3px] border-black flex items-center justify-center font-bold text-black"
+        style={{ backgroundColor: "rgba(111, 120, 135, 0.8)" }}
+      >
+        Get Help
+      </button>
+    </div>
+  </Card>
+
+
+  <div className="hidden md:flex items-center justify-center">
+    <p 
+      className="md:text-[64px] font-bold text-black text-center px-4 leading-tight uppercase"
+      style={{ fontFamily: 'Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif' }}
+    >
+      Choose your help
+    </p>
+  </div>
+
+
+  <Card
+    className="w-full max-w-[224px] min-h-[202px] hover:shadow-lg transition-shadow"
+    imgSrc={topSectionImages[1]}
+    imgAlt="Feature 2"
+  >
+    <div className="flex justify-center w-full">
+      <button
+        className="w-full max-w-[221px] h-[51px] border-[3px] border-black flex items-center justify-center font-bold text-black"
+        style={{ backgroundColor: "rgba(111, 120, 135, 0.8)" }}
+      >
+        Get Help
+      </button>
+    </div>
+  </Card>
+</div>
+
+
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-12 w-full max-w-[1000px]  justify-items-center mb-12 ">
         {bottomCardData.map((item) => (
           <div
             key={item.id}
@@ -59,13 +90,14 @@ export default function HelpSection() {
               />
             </div>
 
-            <div className="p-4 flex flex-col items-start flex-grow">
-              <h5 className="text-xl font-bold text-gray-900 mb-2">
+            <div className="p-4 flex flex-col items-center flex-grow">
+              <h5 className="text-xl font-bold text-gray-900 mb-2 text-center">
                 {item.title}
               </h5>
               <p className="text-gray-700 text-sm mb-auto"></p>
 
-              <button className="w-[190px] h-[60px] border-[3px] border-black bg-transparent rounded-2xl text-black hover:bg-black hover:text-white transition-colors duration-200 font-bold font-['Imprima'] text-[36px] ml-10">
+           
+              <button className="w-[190px] h-[60px] border-[3px] border-black bg-[#6F7887]/80 rounded-2xl text-black hover:bg-black hover:text-white transition-colors duration-200 font-bold font-['Imprima'] text-[36px]">
                 Click Here
               </button>
             </div>
@@ -73,10 +105,11 @@ export default function HelpSection() {
         ))}
       </div>
       <div>
-        <p className="text-[40px] mt-50 text-black">
+        <p className="text-[40px] mt-10 text-black text-center">
           "Building a world where kindness is the ultimate credit."
         </p>
       </div>
     </div>
   );
 }
+

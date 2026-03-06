@@ -16,7 +16,7 @@ const Page = () => {
   return (
     <div
       className="min-h-screen bg-cover bg-center flex flex-col items-center p-4"
-      style={{ backgroundImage: "url('/assets/Background.png')" }}
+      style={{ backgroundImage: "url('/assets/TBBackround.jpeg')" }}
     >
       <form className="flex w-full max-w-lg flex-col items-center gap-6 mt-10">
         <div className="w-full flex flex-col items-center">
@@ -42,32 +42,16 @@ const Page = () => {
             />
           </div>
         </div>
+  
 
-        <div className="w-full flex flex-col items-center ">
-          <div className={customInputContainer}>
-            <input
-              id="repeat-password"
-              type="password"
-              placeholder="Repeat password..."
-              className={inputStyle}
-              required
-            />
-          </div>
-        </div>
-
-        <div className="flex items-center gap-2">
-          <Checkbox id="agree" />
-          <Label htmlFor="agree" className="flex text-black">
-            I agree with the&nbsp;
-            <Link href="#" className="text-black hover:underline">
-              terms and conditions
-            </Link>
-          </Label>
+   <div className="flex items-center gap-2">
+          <Checkbox id="remember" />
+          <Label htmlFor="remember">Remember me</Label>
         </div>
 
         <Button
           type="submit"
-          className="w-full! max-w-174! h-27.25! bg-[#32C2CA]! hover:bg-[#28a8af]! border-2 border-black !rounded-[45px] !text-black text-lg font-bold text-5xl"
+          className="w-full! max-w-174! h-27.25! bg-[#5F4F4F]/50! hover:bg-[#28a8af]! border-2 border-black rounded-[45px] !text-black text-lg font-bold text-5xl"
         >
           Login account
         </Button>
