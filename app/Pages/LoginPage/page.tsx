@@ -42,25 +42,22 @@ const Page = () => {
             />
           </div>
         </div>
-  
 
-   <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2">
           <Checkbox id="remember" />
           <Label htmlFor="remember">Remember me</Label>
         </div>
- 
+
         <Button
           type="submit"
-          className="w-full! max-w-174! h-20.25! bg-[#5F4F4F]/50! hover:bg-[#28a8af]! border-2 border-black rounded-[20px] !text-black text-lg font-bold text-5xl"
+          className="w-full! max-w-174! h-20.25! bg-[#5F4F4F]/50! hover:bg-[#28a8af]! border-2 border-black rounded-[20px] text-black! text-lg font-bold"
         >
           Login account
         </Button>
       </form>
-      
+
       <div>
-        <p className="text-[40px] mt-100">
-        "Invest an hour. Change a life."
-        </p>
+        <p className="text-[40px] mt-100">"Invest an hour. Change a life."</p>
       </div>
     </div>
   );

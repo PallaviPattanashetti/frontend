@@ -1,43 +1,86 @@
 "use client";
 
-import React from 'react';
+import React from "react";
+import { useRouter } from "next/navigation";
 
 const Page = () => {
-  
+  const router = useRouter();
+
   const bottomCardData = [
-    { id: 10, title: "Computer", img: "/assets/Computer.jpeg" },
-    { id: 11, title: "Caption writing", img: "/assets/caption write.png" },
-    { id: 12, title: "Communication", img: "/assets/communications.jpeg" },
-    { id: 13, title: "kids Tutoring", img: "/assets/kidstutor.jpeg" },
-    { id: 14, title: "Speech writing ", img: "/assets/speech.jpeg" },
-    { id: 15, title: "Reading buddy", img: "/assets/readingbuddy.jpeg" },
-    { id: 16, title: "Caption writing", img: "/assets/caption write.png" },
-    { id: 17, title: " Homework Help", img: "/assets/homework .jpeg" },
-    { id: 18, title: "Resume or bio polishing", img: "/assets/resume.jpeg" },
+    {
+      id: 10,
+      title: "Computer",
+      img: "/assets/Computer.jpeg",
+      slug: "computer-skills",
+    },
+    {
+      id: 11,
+      title: "Caption Writing",
+      img: "/assets/caption write.png",
+      slug: "caption-writing",
+    },
+    {
+      id: 12,
+      title: "Communication",
+      img: "/assets/communications.jpeg",
+      slug: "communication",
+    },
+    {
+      id: 13,
+      title: "Kids Tutoring",
+      img: "/assets/kidstutor.jpeg",
+      slug: "kids-tutoring",
+    },
+    {
+      id: 14,
+      title: "Speech Writing",
+      img: "/assets/speech.jpeg",
+      slug: "speech-writing",
+    },
+    {
+      id: 15,
+      title: "Reading Buddy",
+      img: "/assets/readingbuddy.jpeg",
+      slug: "reading-buddy",
+    },
+    {
+      id: 16,
+      title: "Creative Writing",
+      img: "/assets/caption write.png",
+      slug: "creative-writing",
+    }, // Changed title slightly for variety
+    {
+      id: 17,
+      title: "Homework Help",
+      img: "/assets/homework .jpeg",
+      slug: "homework-help",
+    },
+    {
+      id: 18,
+      title: "Resume or Bio Polishing",
+      img: "/assets/resume.jpeg",
+      slug: "resume-polishing",
+    },
   ];
 
   return (
-    <div 
+    <div
       className="min-h-screen bg-cover bg-center flex flex-col items-center p-6"
       style={{ backgroundImage: "url('/assets/TBBackround.jpeg')" }}
     >
-
- <div className="w-full max-w-[596px] min-h-[96px]  bg-[#5F4F4F]/26 rounded-2xl flex items-center justify-center my-8 p-4">
+      <div className="w-full max-w-149 min-h-24 bg-[#5F4F4F]/25 rounded-2xl flex items-center justify-center my-8 p-4">
         <h1 className="text-4xl md:text-[64px] font-extrabold text-black tracking-tight text-center">
-         Learning Help
+          Learning Help
         </h1>
       </div>
-      
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl justify-items-center mb-12">
         {bottomCardData.map((item) => (
           <div
             key={item.id}
-           
-            className="w-full max-w-[280px] min-h-[380px] bg-[#F4F4F4]/50 border-[1px] rounded-2xl border-black flex flex-col overflow-hidden shadow-sm"
+            className="w-full max-w-70 min-h-95 bg-[#F4F4F4]/50 border rounded-2xl border-black flex flex-col overflow-hidden shadow-sm"
           >
-            
-            <div className="w-full h-[180px] border-b-[1px] border-black overflow-hidden">
+            <div className="w-full h-45 border-b border-black overflow-hidden">
               <img
                 src={item.img}
                 alt={item.title}
@@ -45,27 +88,26 @@ const Page = () => {
               />
             </div>
 
-          
-            <div className="p-5 flex flex-col items-center flex-grow justify-between">
+            <div className="p-5 flex flex-col items-center grow justify-between">
               <div className="w-full">
                 <h5 className="text-xl font-bold text-gray-900 mb-2 text-center leading-tight">
                   {item.title}
                 </h5>
-              
-               
               </div>
 
-           
-              <button className="w-full max-w-[180px] py-3 border-[2px] border-black bg-[#6F7887]/80 rounded-xl text-black hover:bg-black hover:text-white transition-all duration-200 font-bold font-['Imprima'] text-[18px] sm:text-[20px]">
+              <button
+                onClick={() => router.push(`/learning-help/${item.slug}`)}
+                className="w-full max-w-45 py-3 border-2 border-black bg-[#6F7887]/80 rounded-xl text-black hover:bg-black hover:text-white transition-all duration-200 font-bold text-[18px] sm:text-[20px]"
+              >
                 Click Here
               </button>
             </div>
           </div>
         ))}
       </div>
-       <div>
-        <p className="text-[40px] mt-10 text-black text-center">
-          "Trade skills, gain time, grow together."
+      <div>
+        <p className="text-[30px] md:text-[40px] mt-10 text-black text-center italic">
+          "Redefining wealth, one hour at a time."
         </p>
       </div>
     </div>
