@@ -13,7 +13,7 @@ const Page = () => {
     { id: 33, title: "Nature trail walks", img: "/assets/naturewalk.jpeg" },
     { id: 34, title: "Dance-based-cardio", img: "/assets/dancecardio.jpeg" },
     { id: 35, title: " Walking group", img: "/assets/walking group.jpeg" },
-    { id: 39, title: "Jump-rope basics ", img: "/assets/jumprope.jpeg" },
+    { id: 36, title: "Jump-rope basics ", img: "/assets/jump-rope.jpeg" },
   ];
 
   return (
@@ -23,7 +23,7 @@ const Page = () => {
     >
 
  <div className="w-full max-w-[596px] min-h-[96px]  bg-[#5F4F4F]/26 rounded-2xl flex items-center justify-center my-8 p-4">
-        <h1 className="text-2xl md:text-[64px] font-extrabold text-black tracking-tight text-center">
+        <h1 className="text-4xl md:text-[64px] font-extrabold text-black tracking-tight text-center">
          Fitness Help
         </h1>
       </div>

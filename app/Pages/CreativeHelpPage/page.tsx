@@ -23,7 +23,7 @@ const Page = () => {
     >
 
  <div className="w-full max-w-[596px] min-h-[96px]  bg-[#5F4F4F]/26 rounded-2xl flex items-center justify-center my-8 p-4">
-        <h1 className="text-2xl md:text-[64px] font-extrabold text-black tracking-tight text-center">
+        <h1 className="text-4xl md:text-[64px] font-extrabold text-black tracking-tight text-center">
          Creative Help
         </h1>
       </div>

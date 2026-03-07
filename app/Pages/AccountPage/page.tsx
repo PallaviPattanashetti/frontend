@@ -7,7 +7,7 @@ import { Button } from "flowbite-react/components/Button";
 
 const RegisterPage = () => {
   const customInputContainer =
-    "w-full max-w-[505px] h-[63px] border-2 border-black rounded-[15px] autofill: bg-[#CD9238]/40 flex items-center px-5";
+    "w-full max-w-[505px] h-[63px] border-2 border-black rounded-[15px] autofill: bg-[#6F7887]/21 flex items-center px-5";
 
   const inputStyle =
     "w-full h-full bg-transparent border-none outline-none focus:ring-0 text-black placeholder-black/60";
@@ -83,17 +83,23 @@ const RegisterPage = () => {
             />
           </div>
         </div>
-
+        <Link
+          href="#"
+          className="text-black-600 hover:underline dark:text-cyan-500"
+        >
+          terms and conditions
+        </Link>
         <Button
           type="submit"
           className="!w-full !max-w-[396px] !h-[109px]  bg-[#5F4F4F]/50 hover:!bg-[#28a8af] border-2 border-black !rounded-[30px] !text-black !text-3xl font-bold"
         >
           Create Account
         </Button>
+        <Button className="w-full   bg-[#5F4F4F]/50">Login with Google</Button>
       </form>
 
       <div>
-        <p className="text-[40px] mt-10">
+        <p className="text-[40px] mt-10 text-black">
           "The bank where everyone is equally wealthy."
         </p>
       </div>

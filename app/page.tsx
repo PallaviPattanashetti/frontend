@@ -14,14 +14,14 @@ const page = () => {
       
       style={{ backgroundImage: "url('./assets/TBBackround.jpeg')" }}
     >
-      <div className="w-full max-w-120 min-h-26  bg-[#5F4F4F]/50 rounded-2xl flex items-center justify-center">
-        <h1 className="text-[40px] md:text-[64px] font-extrabold text-black tracking-tight">
+      <div className="w-full max-w-120 min-h-26  bg-[#CD9238]/40 rounded-2xl flex items-center justify-center">
+        <h1 className="text-[40px] md:text-[64px] font-bold text-black tracking-tight">
           TimeBank
         </h1>
       </div>
 
       <h2
-        className={`${inriaSerif.className} text-[32px] md:text-[64px] text-center max-w-149 leading-tight mt-60 text-black`}
+        className={`${inriaSerif.className} text-[32px] md:text-[64px] text-center max-w-149 leading-tight mt-40 text-black`}
       >
         Exchange time for time: one hour given, one hour gained purely on
         credits, no cash!

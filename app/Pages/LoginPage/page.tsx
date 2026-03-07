@@ -8,7 +8,7 @@ import { Button } from "flowbite-react/components/Button";
 
 const Page = () => {
   const customInputContainer =
-    "w-full max-w-[505px] h-[63px] border-2 border-black rounded-[15px] bg-[#CD9238]/40 flex items-center px-5";
+    "w-full max-w-[505px] h-[63px] border-2 border-black rounded-[15px] bg-[#6F7887]/21 flex items-center px-5";
 
   const inputStyle =
     "w-full h-full bg-transparent border-none outline-none focus:ring-0 text-white placeholder-black/60";
@@ -48,10 +48,10 @@ const Page = () => {
           <Checkbox id="remember" />
           <Label htmlFor="remember">Remember me</Label>
         </div>
-
+ 
         <Button
           type="submit"
-          className="w-full! max-w-174! h-27.25! bg-[#5F4F4F]/50! hover:bg-[#28a8af]! border-2 border-black rounded-[45px] !text-black text-lg font-bold text-5xl"
+          className="w-full! max-w-174! h-20.25! bg-[#5F4F4F]/50! hover:bg-[#28a8af]! border-2 border-black rounded-[20px] !text-black text-lg font-bold text-5xl"
         >
           Login account
         </Button>

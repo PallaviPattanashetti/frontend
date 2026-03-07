@@ -11,7 +11,7 @@ import {
 
 export function NavLinks() {
   return (
-    // <div className="bg-[#CD9238]/42 w-full">
+    
     <div className=" bg-[#28a8af]/42 w-full">
    x
       <Navbar fluid rounded={false} className="bg-transparent px-6 py-4">

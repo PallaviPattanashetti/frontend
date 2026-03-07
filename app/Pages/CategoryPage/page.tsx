@@ -18,12 +18,11 @@ export default function HelpSection() {
   return (
     <div
       className="min-h-screen bg-cover bg-center flex flex-col items-center p-4"
-      // style={{ backgroundImage: "url('/assets/Background.png')" }}
-      style={{ backgroundImage: "url('/assets/TBBackround.jpeg')" }}
+ style={{ backgroundImage: "url('/assets/TBBackround.jpeg')" }}
     >
-      <div className="w-full max-w-[850px] min-h-[70px]   bg-[#5F4F4F]/50 rounded-2xl flex items-center justify-center my-8 p-4">
-        <h1 className="text-2xl md:text-[64px] font-extrabold text-black tracking-tight text-center">
-          Welcome to Help Category
+      <div className="w-full max-w-[550px] min-h-[70px]   bg-[#5F4F4F]/50 rounded-2xl flex items-center justify-center my-8 p-4">
+        <h1 className="text-4xl md:text-[64px] font-extrabold text-black tracking-tight text-center">
+          Help Category
         </h1>
       </div>
 
