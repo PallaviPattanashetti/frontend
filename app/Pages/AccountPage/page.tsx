@@ -7,7 +7,7 @@ import Link from "next/link";
 import { Button } from "flowbite-react/components/Button";
 
 const RegisterPage = () => {
-  // Updated with solid white background for high visibility
+ 
   const customInputContainer =
     "w-full max-w-[505px] min-h-[50px] md:h-[63px] border-2 border-black rounded-[15px] bg-white flex items-center px-5 transition-all shadow-sm";
 
@@ -61,7 +61,7 @@ const RegisterPage = () => {
  
         <Button
           type="submit"
-          className="w-full max-w-[396px] min-h-[60px] md:min-h-[90px] bg-[#5F4F4F]/70 hover:!bg-[#28a8af] border-2 border-black !rounded-[20px] md:!rounded-[30px] !text-black !text-xl md:!text-3xl font-extrabold transition-all mt-2"
+          className="w-full max-w-[396px] min-h-[60px] md:min-h-[90px] bg-[#5F4F4F]/70 hover:!bg-[#28a8af] border-2 border-black !rounded-[10px] md:!rounded-[30px] !text-black !text-xl md:!text-3xl font-extrabold transition-all mt-2"
         >
           Create Account
         </Button>
