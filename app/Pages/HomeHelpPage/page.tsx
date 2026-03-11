@@ -7,46 +7,46 @@ const Page = () => {
   const router = useRouter();
 
   const bottomCardData = [
-    { id: 1, title: "Decor", img: "/assets/Decor.jpeg", slug: "decor" },
     {
-      id: 2,
+      title: "Decor",
+      img: "/assets/Decor.jpeg",
+      slug: "decor",
+      path: "../Pages/DecorPage",
+    },
+    {
       title: "Cleaning",
       img: "/assets/cleaning.jpeg",
       slug: "cleaning",
+      path: "../Pages/CleaningPage",
     },
     {
-      id: 3,
-      title: "Organizing/ Deluttering",
+      title: "Organizing/ Decluttering",
       img: "/assets/Org:decl.jpeg",
       slug: "organizing-decluttering",
+      path: "/home-help/organizing",
     },
     {
-      id: 4,
       title: "Elder Support",
       img: "/assets/Eldersupport.jpeg",
       slug: "elder-support",
     },
     {
-      id: 5,
       title: "Meal Prep",
       img: "/assets/mealpre.jpeg",
       slug: "meal-prep",
     },
     {
-      id: 6,
       title: "Grocery Shopping",
       img: "/assets/Groceryshop.jpeg",
       slug: "grocery-shopping",
     },
-    { id: 7, title: "Laundry", img: "/assets/laundry.jpeg", slug: "laundry" },
+    { title: "Laundry", img: "/assets/laundry.jpeg", slug: "laundry" },
     {
-      id: 8,
       title: "Home safety Checks",
       img: "/assets/Home safety.jpeg",
       slug: "home-safety-checks",
     },
     {
-      id: 9,
       title: "Childcare",
       img: "/assets/Childcare.jpeg",
       slug: "childcare",
@@ -67,7 +67,7 @@ const Page = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl justify-items-center mb-12">
         {bottomCardData.map((item) => (
           <div
-            key={item.id}
+            key={item.title}
             className="w-full max-w-70 min-h-95 bg-[#F4F4F4]/50 border rounded-2xl border-black flex flex-col overflow-hidden shadow-sm"
           >
             <div className="w-full h-45 border-b border-black overflow-hidden">
@@ -86,7 +86,10 @@ const Page = () => {
               </div>
 
               <button
-                onClick={() => router.push(`/home-help/${item.slug}`)}
+                onClick={() => {
+                  const destination = item.path || `/home-help/${item.slug}`;
+                  router.push(destination);
+                }}
                 className="w-full max-w-45 py-3 border-2 border-black bg-[#6F7887]/80 rounded-xl text-black hover:bg-black hover:text-white transition-all duration-200 font-bold text-[18px] sm:text-[20px]"
               >
                 Click Here

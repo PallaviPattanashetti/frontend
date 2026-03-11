@@ -1,27 +1,25 @@
 "use client";
 
+import { title } from "process";
 import React from "react";
 
 const Page = () => {
   const bottomCardData = [
-    { id: 19, title: "Drawing", img: "/assets/drawing.jpeg" },
-    { id: 20, title: "Sewing", img: "/assets/sewing.jpeg" },
-    { id: 21, title: "Festival decoration ", img: "/assets/fesrivedecor.jpeg" },
-    { id: 22, title: "Sculpting", img: "/assets/sculpting.jpeg" },
-    { id: 23, title: "DIY ideas ", img: "/assets/diy ideas.jpeg" },
+    { title: "Drawing", img: "/assets/drawing.jpeg" },
+    { title: "Sewing", img: "/assets/sewing.jpeg" },
+    { title: "Festival decoration ", img: "/assets/fesrivedecor.jpeg" },
+    { title: "Sculpting", img: "/assets/sculpting.jpeg" },
+    { title: "DIY ideas ", img: "/assets/diy ideas.jpeg" },
     {
-      id: 24,
       title: "Simple home décor crafts",
       img: "/assets/craft homedecor.jpeg",
     },
     {
-      id: 25,
       title: "Craft project assistance",
       img: "/assets/craftproject.jpeg",
     },
-    { id: 26, title: " Origami guidance", img: "/assets/origame.jpeg" },
+    { title: " Origami guidance", img: "/assets/origame.jpeg" },
     {
-      id: 27,
       title: "Color palette suggestions",
       img: "/assets/colorpallet.jpeg",
     },
@@ -41,7 +39,7 @@ const Page = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl justify-items-center mb-12">
         {bottomCardData.map((item) => (
           <div
-            key={item.id}
+            key={title}
             className="w-full max-w-[280px] min-h-[380px] bg-[#F4F4F4]/50 border-[1px] rounded-2xl border-black flex flex-col overflow-hidden shadow-sm"
           >
             <div className="w-full h-[180px] border-b-[1px] border-black overflow-hidden">

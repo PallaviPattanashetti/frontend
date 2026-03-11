@@ -8,50 +8,42 @@ const Page = () => {
 
   const bottomCardData = [
     {
-      id: 37,
       title: "Watering",
       img: "/assets/watering.jpeg",
       slug: "watering",
     },
-    { id: 38, title: "Weeding", img: "/assets/weeding.jpeg", slug: "weeding" },
+    { title: "Weeding", img: "/assets/weeding.jpeg", slug: "weeding" },
     {
-      id: 39,
       title: "Harvesting Veggies/Herbs",
       img: "/assets/harvesting.jpeg",
       slug: "harvesting",
     },
     {
-      id: 40,
       title: "Plantation",
       img: "/assets/plantation.jpeg",
       slug: "plantation",
     },
     {
-      id: 41,
       title: "Soil Turning",
       img: "/assets/soilturning.jpeg",
       slug: "soil-turning",
     },
     {
-      id: 42,
       title: "Fertilizing",
       img: "/assets/fertilizing.jpeg",
       slug: "fertilizing",
     },
     {
-      id: 43,
       title: "Trimming Small Plants",
       img: "/assets/trimming plants.jpeg",
       slug: "trimming",
     },
     {
-      id: 44,
       title: "Light Yard Tidying",
       img: "/assets/yard.jpeg",
       slug: "yard-tidying",
     },
     {
-      id: 45,
       title: "Seasonal Cleanup",
       img: "/assets/seasonal cleanup.jpeg",
       slug: "seasonal-cleanup",
@@ -72,7 +64,7 @@ const Page = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl justify-items-center mb-12">
         {bottomCardData.map((item) => (
           <div
-            key={item.id}
+            key={item.title}
             className="w-full max-w-70 min-h-95 bg-[#F4F4F4]/50 border rounded-2xl border-black flex flex-col overflow-hidden shadow-sm"
           >
             <div className="w-full h-45 border-b border-black overflow-hidden">

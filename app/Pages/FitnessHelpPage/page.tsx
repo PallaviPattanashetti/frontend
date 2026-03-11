@@ -7,46 +7,39 @@ const Page = () => {
   const router = useRouter();
 
   const bottomCardData = [
-    { id: 28, title: "Aerobic", img: "/assets/aerobic.jpeg", slug: "aerobic" },
-    { id: 29, title: "Zumba", img: "/assets/Zumba.jpeg", slug: "zumba" },
+    { title: "Aerobic", img: "/assets/aerobic.jpeg", slug: "aerobic" },
+    { title: "Zumba", img: "/assets/Zumba.jpeg", slug: "zumba" },
     {
-      id: 30,
       title: "Partner Workouts",
       img: "/assets/partnerworkout.jpeg",
       slug: "partner-workouts",
     },
     {
-      id: 31,
       title: "Yoga Basics",
       img: "/assets/Yoga.jpeg",
       slug: "yoga-basics",
     },
     {
-      id: 32,
       title: "Simple Home Exercises",
       img: "/assets/home-exercise.jpeg",
       slug: "home-exercises",
     },
     {
-      id: 33,
       title: "Nature Trail Walks",
       img: "/assets/naturewalk.jpeg",
       slug: "nature-walks",
     },
     {
-      id: 34,
       title: "Dance-Based-Cardio",
       img: "/assets/dancecardio.jpeg",
       slug: "dance-cardio",
     },
     {
-      id: 35,
       title: "Walking Group",
       img: "/assets/walking group.jpeg",
       slug: "walking-group",
     },
     {
-      id: 36,
       title: "Jump-Rope Basics",
       img: "/assets/jump-rope.jpeg",
       slug: "jump-rope",
@@ -67,7 +60,7 @@ const Page = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl justify-items-center mb-12">
         {bottomCardData.map((item) => (
           <div
-            key={item.id}
+            key={item.title}
             className="w-full max-w-[280px] min-h-[380px] bg-[#F4F4F4]/50 border-[1px] rounded-2xl border-black flex flex-col overflow-hidden shadow-sm"
           >
             <div className="w-full h-[180px] border-b-[1px] border-black overflow-hidden">

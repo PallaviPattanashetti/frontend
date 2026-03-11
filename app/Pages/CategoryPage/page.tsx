@@ -10,37 +10,31 @@ export default function HelpSection() {
 
   const bottomCardData = [
     {
-      id: 1,
       img: "/assets/HomeHelp.png",
       title: "Home Help",
       path: "./HomeHelpPage",
     },
     {
-      id: 2,
       img: "/assets/Learning Help.png",
       title: "Learning Help",
       path: "./LearningHelpPage",
     },
     {
-      id: 3,
       img: "/assets/Garden.png",
       title: "Garden Help",
       path: "./GardenHelpPage",
     },
     {
-      id: 4,
       img: "/assets/pethelp.png",
       title: "Pet Help",
       path: "./PetHelpPage",
     },
     {
-      id: 5,
       img: "/assets/creative.png",
       title: "Creative Help",
       path: "./CreativeHelpPage",
     },
     {
-      id: 6,
       img: "/assets/Fitness help.png",
       title: "Fitness Help",
       path: "./FitnessHelpPage",
@@ -120,7 +114,7 @@ export default function HelpSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-12 w-full max-w-[1000px] justify-items-center mb-12">
         {bottomCardData.map((item) => (
           <div
-            key={item.id}
+            key={item.title}
             className={`w-[300px] h-[432px] bg-[#F4F4F4]/50 border-2 rounded-2xl border-black flex flex-col transition-all duration-300 ${
               !helpType
                 ? "opacity-30 grayscale pointer-events-none"

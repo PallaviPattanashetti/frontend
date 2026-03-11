@@ -63,7 +63,7 @@ export default function ChatPage() {
               swap?
             </div>
             <div className="bg-gray-100 text-gray-800 p-3 px-4 rounded-2xl rounded-tl-none self-start max-w-[80%] text-sm">
-              Hey! Yes, I'm available. What did you have in mind?
+              Hey! Yes, Im available. What did you have in mind?
             </div>
           </div>
 
@@ -97,7 +97,7 @@ export default function ChatPage() {
 
       <div>
         <p className="text-[40px] mt-10 text-black text-center">
-          "A community is just a collection of shared hours."
+          A community is just a collection of shared hours.
         </p>
       </div>
     </div>
