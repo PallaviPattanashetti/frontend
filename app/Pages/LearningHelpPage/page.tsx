@@ -8,55 +8,55 @@ const Page = () => {
 
   const bottomCardData = [
     {
-      id: 10,
+   
       title: "Computer",
       img: "/assets/Computer.jpeg",
       slug: "computer-skills",
     },
     {
-      id: 11,
+  
       title: "Caption Writing",
       img: "/assets/caption write.png",
       slug: "caption-writing",
     },
     {
-      id: 12,
+
       title: "Communication",
       img: "/assets/communications.jpeg",
       slug: "communication",
     },
     {
-      id: 13,
+    
       title: "Kids Tutoring",
       img: "/assets/kidstutor.jpeg",
       slug: "kids-tutoring",
     },
     {
-      id: 14,
+
       title: "Speech Writing",
       img: "/assets/speech.jpeg",
       slug: "speech-writing",
     },
     {
-      id: 15,
+      
       title: "Reading Buddy",
       img: "/assets/readingbuddy.jpeg",
       slug: "reading-buddy",
     },
     {
-      id: 16,
+      
       title: "Creative Writing",
       img: "/assets/caption write.png",
       slug: "creative-writing",
-    }, // Changed title slightly for variety
+    }, 
     {
-      id: 17,
+     
       title: "Homework Help",
       img: "/assets/homework .jpeg",
       slug: "homework-help",
     },
     {
-      id: 18,
+      
       title: "Resume or Bio Polishing",
       img: "/assets/resume.jpeg",
       slug: "resume-polishing",
@@ -77,7 +77,7 @@ const Page = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl justify-items-center mb-12">
         {bottomCardData.map((item) => (
           <div
-            key={item.id}
+            key={item.title}
             className="w-full max-w-70 min-h-95 bg-[#F4F4F4]/50 border rounded-2xl border-black flex flex-col overflow-hidden shadow-sm"
           >
             <div className="w-full h-45 border-b border-black overflow-hidden">
