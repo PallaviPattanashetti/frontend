@@ -30,7 +30,7 @@ const Page = () => {
             type: "text",
             placeholder: "Enter your First and Last name...",
           },
-          { id: "email2", type: "email", placeholder: "name@flowbite.com" },
+          { id: "email", type: "email", placeholder: "name@flowbite.com" },
           {
             id: "password2",
             type: "password",
