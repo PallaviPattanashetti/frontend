@@ -1,37 +1,61 @@
+
 "use client";
-import React from "react";
-import { Checkbox } from "flowbite-react/components/Checkbox";
-import { Label } from "flowbite-react/components/Label";
-import Link from "next/link";
-import { Button } from "flowbite-react/components/Button";
+import { useMapLocation } from "@/context/context";
+import { fetchMapLocation } from "@/dataservices/dataservices";
+import { Button } from "flowbite-react";
+import React, { useState } from "react";
 
-const MapPage = () => {
- 
-  const customInputContainer =
-    "w-full max-w-[505px] min-h-[50px] md:h-[63px] border-2 border-black rounded-[15px] bg-white flex items-center px-5 transition-all shadow-sm";
+export default function MapPage() {
 
-  const inputStyle =
-    "w-full h-full bg-transparent border-none outline-none focus:ring-0 text-black placeholder-black/50 text-sm md:text-base";
+  const { maplocation, setMapLocation } = useMapLocation();
+
+  const [searchPlace, setSearchPlace] = useState<string>("Manteca");
+
+ const handleEnter = async () => {
+    const data = await fetchMapLocation("Manteca");
+    
+    if (data && data.length > 0) {
+      setMapLocation(data[0]); 
+    } else {
+      console.log("No location found");
+    }
+  };
 
   return (
     <div
-      className="min-h-screen bg-cover bg-center flex flex-col items-center p-4 md:p-8"
+      className="min-h-screen flex flex-col items-center p-6 bg-cover bg-center"
       style={{ backgroundImage: "url('/assets/TBBackround.jpeg')" }}
     >
-  
-      <div className="w-full max-w-99 min-h-20 md:min-h-24.75 bg-[#5F4F4F]/60 rounded-2xl flex items-center justify-center my-6 md:my-10 px-4 border border-black/10">
-        <h1 className="text-[28px] md:text-[64px] font-extrabold text-black tracking-tight text-center leading-tight">
-          Welcome
+      <div className="bg-gray-500 bg-opacity-60 rounded-xl p-4 mt-8 mb-8">
+        <h1 className="text-3xl font-bold text-black text-center">
+ 
+          {maplocation ? `Welcome to ${maplocation.title}` : "Welcome"}
         </h1>
       </div>
 
-<div className="max-w-2xl text-center mt-8 md:mt-12">
-        <p className="text-xl md:text-[36px] text-black font-bold italic leading-tight">
-         "Wherever you are, you have something to give."
-        </p>
+      <div className="w-full max-w-4xl h-96 border-4 border-white rounded-xl overflow-hidden mb-10">
+        <iframe
+          title="Map"
+          width="100%"
+          height="100%"
+        
+          src={maplocation 
+            ? `https://www.openstreetmap.org/export/embed.html?bbox=${maplocation.long - 0.02}%2C${maplocation.lat - 0.02}%2C${maplocation.long + 0.02}%2C${maplocation.lat + 0.02}&layer=mapnik&marker=${maplocation.lat}%2C${maplocation.long}`
+            : "https://www.openstreetmap.org/export/embed.html?bbox=-110%2C-20%2C110%2C70&layer=mapnik"
+          }
+          style={{ border: "0" }}
+        ></iframe>
       </div>
+
+      <Button onClick={handleEnter} className="bg-black/20 text-4xl stroke-3">
+        Enter
+      </Button>
+
+      <p className="text-xl font-semibold text-center italic mt-6">
+        {maplocation 
+          ? `Now showing: ${maplocation.category}` 
+          : "Wherever you are, you have something to give."}
+      </p>
     </div>
   );
-};
-
-export default MapPage;
+}

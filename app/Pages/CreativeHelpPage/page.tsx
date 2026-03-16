@@ -5,11 +5,20 @@ import React from "react";
 
 const Page = () => {
   const bottomCardData = [
-    { title: "Drawing", img: "/assets/drawing.jpeg" },
-    { title: "Sewing", img: "/assets/sewing.jpeg" },
-    { title: "Festival decoration ", img: "/assets/fesrivedecor.jpeg" },
-    { title: "Sculpting", img: "/assets/sculpting.jpeg" },
-    { title: "DIY ideas ", img: "/assets/diy ideas.jpeg" },
+    { title: "Drawing", 
+      img: "/assets/drawing.jpeg" },
+      
+    { title: "Sewing", 
+      img: "/assets/sewing.jpeg" },
+
+    { title: "Festival decoration ", 
+      img: "/assets/fesrivedecor.jpeg" },
+
+    { title: "Sculpting", 
+      img: "/assets/sculpting.jpeg" },
+
+    { title: "DIY ideas ", 
+      img: "/assets/diy ideas.jpeg" },
     {
       title: "Simple home décor crafts",
       img: "/assets/craft homedecor.jpeg",

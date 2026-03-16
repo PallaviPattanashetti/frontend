@@ -5,9 +5,9 @@ import { Label } from "flowbite-react/components/Label";
 import Link from "next/link";
 import { Button } from "flowbite-react/components/Button";
 
-const RegisterPage = () => {
+const Page = () => {
   const customInputContainer =
-    "w-full max-w-[505px] min-h-[50px] md:h-[63px] border-2 border-black rounded-[15px] bg-[#6F7887]/21 flex items-center px-5 transition-all shadow-sm";
+    "w-full max-w-[505px] min-h-[50px] md:h-[63px] border-2 border-black rounded-[15px] bg-white flex items-center px-5 transition-all shadow-sm";
 
   const inputStyle =
     "w-full h-full bg-transparent border-none outline-none focus:ring-0 text-black placeholder-black/50 text-sm md:text-base";
@@ -17,7 +17,7 @@ const RegisterPage = () => {
       className="min-h-screen bg-cover bg-center flex flex-col items-center p-4 md:p-8"
       style={{ backgroundImage: "url('/assets/TBBackround.jpeg')" }}
     >
-      <div className="w-full max-w-[396px] min-h-[80px] md:min-h-[99px] bg-[#5F4F4F]/60 rounded-2xl flex items-center justify-center my-6 md:my-10 px-4 border border-black/10">
+      <div className="w-full max-w-89 min-h-[80px] md:min-h-24.75 bg-[#5F4F4F]/60 rounded-2xl flex items-center justify-center my-6 md:my-10 px-4 border border-black/10">
         <h1 className="text-[28px] md:text-[64px] font-extrabold text-black tracking-tight text-center leading-tight">
           Register
         </h1>
@@ -71,7 +71,7 @@ const RegisterPage = () => {
 
         <Button
           type="submit"
-          className="w-full max-w-[396px] min-h-[60px] md:min-h-[90px] bg-[#5F4F4F]/70 hover:!bg-[#28a8af] border-2 border-black  md:!rounded-[30px] !text-black !text-xl md:!text-3xl font-extrabold transition-all mt-2"
+          className="w-full max-w-99 min-h-15 md:min-h-22.5 bg-[#5F4F4F]/70 hover:bg-[#28a8af]! border-2 border-black  md:!rounded-[30px] !text-black !text-xl md:!text-3xl font-extrabold transition-all mt-2"
         >
           Create Account
         </Button>
@@ -90,4 +90,7 @@ const RegisterPage = () => {
   );
 };
 
-export default RegisterPage;
+export default Page;
+
+
+

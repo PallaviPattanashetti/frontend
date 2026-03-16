@@ -8,7 +8,7 @@ import { Button } from "flowbite-react/components/Button";
 
 const Page = () => {
   const customInputContainer =
-    "w-full max-w-[505px] h-[63px] border-2 border-black rounded-[15px] bg-[#6F7887]/21 flex items-center px-5";
+    "w-full max-w-[505px] h-[63px] border-2 border-black rounded-[15px] bg-white flex items-center px-5";
 
   const inputStyle =
     "w-full h-full bg-transparent border-none outline-none focus:ring-0 text-white placeholder-black/60";

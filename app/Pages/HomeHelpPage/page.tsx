@@ -40,7 +40,9 @@ const Page = () => {
       img: "/assets/Groceryshop.jpeg",
       slug: "grocery-shopping",
     },
-    { title: "Laundry", img: "/assets/laundry.jpeg", slug: "laundry" },
+    { title: "Laundry", 
+      img: "/assets/laundry.jpeg",
+       slug: "laundry" },
     {
       title: "Home safety Checks",
       img: "/assets/Home safety.jpeg",
