@@ -32,7 +32,7 @@ const UnifiedAuthForm = () => {
       const success = await createAccount(formData);
       if (success) {
         alert("Account Created! Please Sign In.");
-        setSwitchBool(true); // Move to login after success
+        setSwitchBool(true); 
       } else {
         alert("Registration failed. Email might already exist.");
       }
