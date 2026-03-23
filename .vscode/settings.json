@@ -1,0 +1,35 @@
+{
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    "theme"
+  ],
+  "tailwindCSS.experimental.classRegex": [
+    [
+      "twMerge\\(([^)]*)\\)",
+      "[\"'`]([^\"'`]*).*?[\"'`]"
+    ],
+    [
+      "createTheme(?:<\\w+>)?\\s*\\(([^)]*)\\)",
+      "{?\\s?[\\w].*:\\s*?[\"'`]([^\"'`]*).*?,?\\s?}?"
+    ]
+  ],
+  "cSpell.words": [
+    "Accountinterfaces",
+    "Blmag",
+    "Deluttering",
+    "Eldersupport",
+    "mapinterfaces",
+    "maplocation",
+    "mealpre",
+    "offerhelp",
+    "pethelp",
+    "Playdate",
+    "readingbuddy",
+    "Thorne",
+    "Zumba"
+  ]
+}
