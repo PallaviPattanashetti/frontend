@@ -1,48 +1,61 @@
-import { Token, UserRegistration, UserLogin } from "@/interfaces/Accountinterfaces";
+import { Token, UserInfo } from "@/interfaces/interfaces";
 
-const url = "https://your-api-url.com/"; 
+const url = "";
 
-export const createAccount = async (user: UserRegistration) => {
-  try {
-    const res = await fetch(`${url}CreateUser`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(user),
+export const createAccount = async (user: UserInfo) => {
+    const res = await fetch(url + '/register', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(user)
     });
+
+    if(!res.ok) {
+        const data = await res.json();
+        const message = data.message;
+
+        console.log(message);
+
+        return data.success;
+    }
 
     const data = await res.json();
-    return data.success; 
-  } catch (error) {
-    console.error("Registration error:", error);
-    return false;
-  }
-};
+    console.log(data);
+    return data.success;
+}
 
-
-export const login = async (credentials: UserLogin): Promise<Token | null> => {
-  try {
-    const res = await fetch(`${url}Login`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(credentials),
+export const login = async (user: UserInfo) => {
+    const res = await fetch(url + '/login', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(user)
     });
 
-    if (!res.ok) return null;
+    if(!res.ok) {
+        const data = await res.json();
+        const message = data.message;
+        console.log(message);
+        return null;
+    }
 
     const data: Token = await res.json();
     return data;
-  } catch (error) {
-    console.error("Login error:", error);
-    return null;
-  }
-};
+}
 
-
-export const getUserByUsername = async (username: string) => {
-  const res = await fetch(`${url}GetUserByUsername/${username}`);
-  if (res.ok) {
+export const getUserByUsername = async (useremail: string) => {
+    const res = await fetch(url + `/GetUserByUseremail/${useremail}`);
     const data = await res.json();
-    localStorage.setItem("user", JSON.stringify(data));
-  }
-};
+    localStorage.setItem('user', JSON.stringify(data));
+}
 
+export const checkToken = () => {
+    const token = localStorage.getItem('token');
+    return !!token; 
+}
+
+export const getToken = () => localStorage.getItem('token') ?? '';
+
+export const loggedInData = () => JSON.parse(localStorage.getItem('user')!);

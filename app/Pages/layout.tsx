@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { NavLinks } from '../Components/NavLinks';
+import { NavLinks } from "@/app/components/NavLinks";
 import { MapLocationProvider } from '@/context/context';
 
 function layout({
@@ -11,7 +11,7 @@ function layout({
   return (
     <MapLocationProvider> 
       <div className="flex flex-col min-h-screen">
-        <NavLinks />
+        {/* <NavLinks /> */}
       
         <main className="grow">
           {children}

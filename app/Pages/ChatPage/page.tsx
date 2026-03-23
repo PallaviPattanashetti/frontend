@@ -89,11 +89,7 @@ export default function ChatPage() {
         </div>
       </div>
 
-      {/* <div className="mt-4">
-        <span className="text-gray-500 text-[11px] font-medium bg-white/80 px-4 py-1 rounded-full border border-gray-200 shadow-sm">
-          Active Session
-        </span>
-      </div> */}
+     
 
       <div>
         <p className="text-[40px] mt-10 text-black text-center">

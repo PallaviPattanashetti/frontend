@@ -1,16 +1,18 @@
-import { useState } from "react";
-export interface MapLocation{
-id: number
-lat:number
-long:number
-title:string
-category:string
-
-
+export interface UserInfo {
+    
+    name: string
+    email:string
+    password:string
+    city:string
+    skill:string
 }
 
 
-export interface MapLocationContextType{
-    maplocation:MapLocation|null;
-    setMapLocation:(MapLocation:MapLocation|null)=>void
+export interface UserLogin {
+email: string
+    password: string
+}
+
+export interface Token {
+    token:string;
 }
